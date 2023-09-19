@@ -144,3 +144,22 @@ footer {
   color: white;
   text-decoration: none;
 }
+
+@media screen and (max-width: 576px) {
+  header {
+    height: auto;
+  }
+  .logo {
+    float: none;
+  }
+  .menu {
+    float: none;
+    margin-top: 15px;
+  }
+  .menu ul {
+    padding-left: 0;
+  }
+  .menu ul li {
+    display: block;
+  }
+}
