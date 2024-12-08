@@ -48,12 +48,15 @@ header .contenedor {
 .hero {
     background-color: var(--primary-color);
     padding: 15px 30px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    position: relative;
 }
 
 .hero .contenedor {
     display: flex;
     justify-content: space-between;
+    z-index: 2;
+    position: relative;
 }
 
 .hero-content {
@@ -90,49 +93,45 @@ header .contenedor {
     border-color: var(--third-color);
 }
 
-/*.contenedor {
-
-.hero {
-    position: relative;
-}
-.hero:after {
-    content: "";
-    display: block;
-    background-image: url('../img/Bg_03.png');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+.hero::before {
+    content: '';
+    background-image: url('../img/hero-bg.png');
     position: absolute;
     left: 0;
     bottom: 0;
-    right: 0;
-    height: 100%;
-    z-index: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 300px;
+    width: 100%;
 }
 
-.hero-titulo {
-  font-size: 50px;
-  margin-bottom: 25px;
-    z-index: 5;
-    position: relative;
+main {
+    display: flex;
+    padding: 15px 30px 70px;
 }
-.hero-options a {
-  border: 1px solid white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: white;
-  float: left;
-  text-decoration: none;
+.productos {
+    display: flex;
+    flex-direction: column;
 }
-.hero-options a:nth-child(2) {
-  float: right;
-  background-color: #732B8F;
-  border-color: #732B8F;
+
+.productos h1 {
+    text-align: center;
 }
-.hero-img {
-  width: 50%;
-  float: left;
+
+.productos > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+.productos > div > div {
+    flex: 1;
+}
+.producto-img img {
+    width: 100%;
+}
+/*.contenedor {
+
 main {
   padding: 15px 30px 70px;
   overflow: auto;
